@@ -1,1 +1,29 @@
-/*  your css code here. If applicable */
+:root {
+  --original-color: rgb(29, 29, 29);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(17, 17, 17);
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.square {
+  width: 37px;
+  height: 37px;
+  background-color: var(--original-color);
+  transition: background-color 1s ease-in-out;
+}

@@ -1,1 +1,30 @@
-//your JS code here. If required.
+const container = document.querySelector(".container");
+
+for (let i = 0; i < 820; i++) {
+  const square = document.createElement("div");
+  square.classList.add("square");
+  container.appendChild(square);
+  square.addEventListener("mouseover", changeColor);
+  square.addEventListener("mouseleave", revertColor);
+}
+
+function changeColor(e) {
+  e.target.style.backgroundColor = generateRandomHexCode();
+}
+
+function revertColor(e) {
+  setTimeout(() => {
+    e.target.style.backgroundColor = "var(--original-color)";
+  }, 1000);
+}
+
+function generateRandomHexCode() {
+  const characters = "0123456789abcdef";
+  let hexCode = "#";
+
+  for (let i = 0; i < 6; i++) {
+    hexCode += characters[Math.floor(Math.random() * 16)];
+  }
+
+  return hexCode;
+}
