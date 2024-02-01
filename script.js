@@ -1,31 +1,16 @@
-const container = document.querySelector(".container");
+const container = document.getElementById("container");
+const squares = 800;
 
-for (let i = 0; i < 800; i++) {
-  const square = document.createElement("div");
-  square.classList.add("square");
-  container.appendChild(square);
-  square.addEventListener("mouseenter", changeColor);
-	square.addEventListener("mouseover", changeColor);
-  square.addEventListener("mouseleave", revertColor);
-}
+for (let i = 0; i < squares; i++) {
+  const innerDiv = document.createElement("div");
+  innerDiv.className = "square";
+  container.appendChild(innerDiv);
 
-function changeColor(e) {
-  e.target.style.backgroundColor = generateRandomHexCode();
-}
+  innerDiv.addEventListener("mouseover", () => {
+    innerDiv.style.animation = "changing 1s linear forwards";
+  });
 
-function revertColor(e) {
-  setTimeout(() => {
-    e.target.style.backgroundColor = "rgb(29, 29, 29)";
-  }, 1000);
-}
-
-function generateRandomHexCode() {
-  const characters = "0123456789abcdef";
-  let hexCode = "#";
-
-  for (let i = 0; i < 6; i++) {
-    hexCode += characters[Math.floor(Math.random() * 16)];
-  }
-
-  return hexCode;
+  innerDiv.addEventListener("mouseout", () => {
+    innerDiv.style.animation = "";
+  });
 }
