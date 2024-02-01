@@ -14,7 +14,7 @@ function changeColor(e) {
 
 function revertColor(e) {
   setTimeout(() => {
-    e.target.style.backgroundColor = "var(--original-color)";
+    e.target.style.backgroundColor = "rgb(17, 17, 17)";
   }, 1000);
 }
 

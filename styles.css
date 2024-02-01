@@ -1,7 +1,3 @@
-:root {
-  --original-color: rgb(29, 29, 29) !important;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +18,6 @@ body {
 .square {
   width: 35px;
   height: 35px;
-  background-color: var(--original-color) !important;
+  /* background-color: rgb(29, 29, 29) !important; */
   transition: background-color 1s linear;
 }
