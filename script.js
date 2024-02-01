@@ -5,6 +5,7 @@ for (let i = 0; i < 800; i++) {
   square.classList.add("square");
   container.appendChild(square);
   square.addEventListener("mouseenter", changeColor);
+	square.addEventListener("mouseover", changeColor);
   square.addEventListener("mouseleave", revertColor);
 }
 
@@ -14,7 +15,7 @@ function changeColor(e) {
 
 function revertColor(e) {
   setTimeout(() => {
-    e.target.style.backgroundColor = "rgb(17, 17, 17)";
+    e.target.style.backgroundColor = "rgb(29, 29, 29)";
   }, 1000);
 }
 
