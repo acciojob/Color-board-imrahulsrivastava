@@ -1,10 +1,10 @@
 const container = document.querySelector(".container");
 
-for (let i = 0; i < 820; i++) {
+for (let i = 0; i < 800; i++) {
   const square = document.createElement("div");
   square.classList.add("square");
   container.appendChild(square);
-  square.addEventListener("mouseover", changeColor);
+  square.addEventListener("mouseenter", changeColor);
   square.addEventListener("mouseleave", revertColor);
 }
 
